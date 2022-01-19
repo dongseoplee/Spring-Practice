@@ -12,7 +12,7 @@ public class HelloController {
     //MVC -> Model, View, Controller
     public String hello(Model model) {
 
-        model.addAttribute("data", "hello234!! (attributeValue 값!)");
-        return "hello"; //return hello의 의미는 resources/templat   es의 hello.html로 가서 렌더링해라 윗줄의 model을 같이 hello.html로 넘겨줌
+        model.addAttribute("data", "hello 9자Dragon!! (attributeValue 값!)");
+        return "hello"; //return hello의 의미는 resources/templates의 hello.html로 가서 렌더링해라 윗줄의 model을 같이 hello.html로 넘겨줌
     }
 }
