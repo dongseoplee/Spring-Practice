@@ -33,7 +33,7 @@ public class HelloController {
 
     @GetMapping("hello-api") //localhost:8080/hello-api?name=spring!
     @ResponseBody
-    public Hello helloApi(@RequestParam("name") String name) {
+    public Hello helloApi(@RequestParam("name") String name) { //?name=lee
         Hello hello = new Hello();
         hello.setName(name);
         return hello; //객체반환 -> json 방식
