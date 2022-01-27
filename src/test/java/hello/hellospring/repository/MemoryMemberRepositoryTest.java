@@ -20,10 +20,10 @@ public class MemoryMemberRepositoryTest {
 
     @Test
     public void save() {
-        Member member = new Member();
-        member.setName("spring");
+        Member member = new Member(); //member 객체를 만들고
+        member.setName("spring"); //member 객체의 name을 spring으로 설정한다
 
-        repository.save(member);
+        repository.save(member); //save 메소드 호출되면서 member 객체의 Id도 같이 설정됨
 
         Member result = repository.findById(member.getId()).get();
         assertThat(result).isEqualTo(member);
@@ -32,6 +32,10 @@ public class MemoryMemberRepositoryTest {
 
     @Test
     public void findByName() {
+        /*
+        * 1. 객체 만들기
+        * 2. 이름 설정하기 setName()
+        * 3. save하기 (Id는 자동으로 설정됨)*/
         Member member1 = new Member();
         member1.setName("spring1");
         repository.save(member1);
